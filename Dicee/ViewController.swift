@@ -18,9 +18,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        updateDiceImages()
     }
 
     @IBAction func rollButtonPressed(_ sender: Any) {
+        updateDiceImages()
+    }
+
+    func updateDiceImages() {
         // can use Int.random(in: 0...5)
         let randomDiceIndex1 = Int(arc4random_uniform(6))
         let randomDiceIndex2 = Int(arc4random_uniform(6))
